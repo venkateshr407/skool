@@ -60,7 +60,7 @@ const HeroSection = () => {
                                     </Header5>
                                 </BoxOne>
                                 <BoxTwo>
-                                    <Button>Book a free Demo Now</Button>
+                                    <Button to="/">Book a free Demo Now</Button>
                                 </BoxTwo>
                             </ButtonWrapper>
                         </Column1Wrapper>

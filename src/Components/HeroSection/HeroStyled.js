@@ -2,7 +2,6 @@ import styled from "styled-components";
 import { Link } from "react-router-dom";
 
 export const Container = styled.div`
-    height: 100vh;
     width: 100%;
 `;
 
@@ -23,7 +22,10 @@ export const Column1Wrapper = styled.div`
     display: flex;
     flex-direction: column;
     justify-content: center;
-    height: 100vh;
+    height: 80vh;
+    @media screen and (max-width: 1025px) {
+        height: auto;
+    }
 `;
 export const Header4 = styled.h4`
     font-size: 21px;
@@ -54,6 +56,9 @@ export const ButtonWrapper = styled.div`
 `;
 export const BoxOne = styled.div`
     position: relative;
+    @media screen and (max-width: 900px) {
+        width: 70%;
+    }
 `;
 
 export const BoxLine = styled.img`
@@ -72,6 +77,9 @@ export const Header5 = styled.h5`
     align-items: center;
     justify-content: center;
     font-size: 1em;
+    @media screen and (max-width: 900px) {
+        left: center;
+    }
 `;
 export const SpanText = styled.span`
     font-size: 1.4em;
@@ -81,7 +89,7 @@ export const SpanText = styled.span`
 export const BoxTwo = styled.div`
     width: 40%;
 `;
-export const Button = styled.div`
+export const Button = styled(Link)`
     background: rgb(22, 20, 66);
     background: linear-gradient(
         90deg,
@@ -94,25 +102,34 @@ export const Button = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
-    color: #fff;
+    text-align: center;
 
+    color: #fff;
+    padding: 0.5em;
+    text-decoration: none;
     border-radius: 50px;
+    @media screen and (max-width: 900px) {
+        text-align: center;
+        padding: 1em;
+        height: 50px;
+    }
 `;
 
 export const Column2 = styled.div`
     height: auto;
 `;
 export const Column2Wrapper = styled.div`
-    /* display: flex;
-    flex-direction: column;
-    justify-content: center; */
-    /* height: 100vh; */
     align-items: center;
+    height: 90vh;
+    @media screen and (max-width: 1025px) {
+        height: auto;
+    }
 `;
 
 export const HeroImage = styled.img`
     width: 100%;
     height: 100%;
+    padding: 1.5em 0;
 `;
 
 export const DemoDetials = styled.div`
@@ -120,6 +137,13 @@ export const DemoDetials = styled.div`
     position: absolute;
     top: 90%;
     display: flex;
+    margin: 1em 0 0.5em 0;
+
+    @media screen and (max-width: 900px) {
+        position: unset;
+        bottom: 0;
+        margin: 1em 0 0.5em 0;
+    }
 `;
 export const HeaderText3 = styled.h3`
     font-size: 1em;
