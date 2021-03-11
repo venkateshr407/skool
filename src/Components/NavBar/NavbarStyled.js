@@ -3,27 +3,33 @@ import { NavLink as Link } from 'react-router-dom';
 import styled from 'styled-components';
 
 export const Nav = styled.nav`
-  background: #000;
-  height: 80px;
+  background: #fff;
+  height: 70px;
   display: flex;
   justify-content: space-between;
-  padding: 0.5rem calc((100vw - 1000px) / 2);
-  z-index: 10;
-  /* Third Nav */
-  /* justify-content: flex-start; */
+  padding:0 2em;
+  z-index: 999;
+  position:sticky;
 `;
 
+
+export const LogoImage = styled.img`
+ width:50%;
+ padding:1em;
+
+`;
 export const NavLink = styled(Link)`
-  color: #fff;
+  color: #EF5730;
+  font-weight:bold;
   display: flex;
   align-items: center;
   text-decoration: none;
   padding: 0 1rem;
   height: 100%;
   cursor: pointer;
-  &.active {
+  /* &.active {
     color: #15cdfc;
-  }
+  } */
 `;
 
 export const Bars = styled(FaBars)`
@@ -45,10 +51,8 @@ export const NavMenu = styled.div`
   align-items: center;
   margin-right: -24px;
   /* Second Nav */
-  /* margin-right: 24px; */
-  /* Third Nav */
-  /* width: 100vw;
-  white-space: nowrap; */
+  margin-right: 24px;
+ 
   @media screen and (max-width: 768px) {
     display: none;
   }
@@ -67,8 +71,14 @@ export const NavBtn = styled.nav`
 `;
 
 export const NavBtnLink = styled(Link)`
-  border-radius: 4px;
-  background: #256ce1;
+  border-radius: 50px;
+  background: rgb(22, 20, 66);
+    background: linear-gradient(
+        90deg,
+        rgba(22, 20, 66, 1) 0%,
+        rgba(22, 20, 66, 1) 21%,
+        rgba(239, 87, 48, 1) 88%
+    );
   padding: 10px 22px;
   color: #fff;
   outline: none;

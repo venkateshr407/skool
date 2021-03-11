@@ -1,44 +1,38 @@
 import React from "react";
-import { FaBars } from "react-icons/fa";
 import {
         Nav,
         NavLink,
         Bars,
         NavMenu,
         NavBtn,
+        LogoImage,
         NavBtnLink
       } from './NavbarStyled';
+import Logo from '../../Asset/Logo.png';
 
-const NavBar = () => {
+export const NavBar = ( {toggle}) => {
     return (
         <>
-            <Nav>
+        <Nav>
         <NavLink to='/'>
-          {/* <img src={require('../../images/logo.svg')} alt='logo' /> */}
+          <LogoImage src={Logo} alt='logo' />
         </NavLink>
-        <Bars />
+        <Bars onClick={toggle} />
         <NavMenu>
-          <NavLink to='/about' activeStyle>
-            About
+          <NavLink to='/' >
+            About Us
           </NavLink>
-          <NavLink to='/services' activeStyle>
-            Services
+          <NavLink to='/' >
+            Our Programme
           </NavLink>
-          <NavLink to='/contact-us' activeStyle>
-            Contact Us
-          </NavLink>
-          <NavLink to='/sign-up' activeStyle>
-            Sign Up
-          </NavLink>
-          {/* Second Nav */}
-          {/* <NavBtnLink to='/sign-in'>Sign In</NavBtnLink> */}
+         
+          <NavBtnLink to='/sign-in'>Book a free Demo Now</NavBtnLink>
         </NavMenu>
-        <NavBtn>
+        {/* <NavBtn>
           <NavBtnLink to='/signin'>Sign In</NavBtnLink>
-        </NavBtn>
+        </NavBtn> */}
       </Nav>
         </>
     );
 };
 
-export default NavBar;
